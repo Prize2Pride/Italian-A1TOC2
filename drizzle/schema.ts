@@ -51,7 +51,7 @@ export const lessons = mysqlTable("lessons", {
   registerLevel: varchar("registerLevel", { length: 50 }).default("neutro"),
   
   // All 7 registers for this lesson (JSON array with translations in each register)
-  registerVariations: json("registerVariations").default(JSON.stringify({})), // {sporchissimo: {...}, sporco: {...}, etc}
+  // registerVariations: json("registerVariations").default(JSON.stringify({})), // {sporchissimo: {...}, sporco: {...}, etc}
   
   // Metadata
   isPublished: boolean("isPublished").default(true).notNull(),
