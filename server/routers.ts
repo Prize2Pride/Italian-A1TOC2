@@ -7,6 +7,7 @@ import { professorRouter } from "./routers/professor";
 import { cultureRouter } from "./routers/culture";
 import { literatureRouter } from "./routers/literature";
 import { pronunciationRouter } from "./routers/pronunciation";
+import { generationRouter } from "./routers/generation";
 
 export const appRouter = router({
   // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -28,6 +29,7 @@ export const appRouter = router({
   culture: cultureRouter,
   literature: literatureRouter,
   pronunciation: pronunciationRouter,
+  generation: generationRouter,
 });
 
 export type AppRouter = typeof appRouter;

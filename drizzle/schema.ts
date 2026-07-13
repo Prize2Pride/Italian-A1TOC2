@@ -47,8 +47,11 @@ export const lessons = mysqlTable("lessons", {
   // Quiz questions
   quizQuestions: json("quizQuestions").notNull(), // Array of quiz objects
   
-  // Register level (volgare, colloquiale, neutro, formale, letterario)
+  // Register level (7 levels: sporchissimo, sporco, informale, neutro, formale, diplomatico, diplomatico_elevato)
   registerLevel: varchar("registerLevel", { length: 50 }).default("neutro"),
+  
+  // All 7 registers for this lesson (JSON array with translations in each register)
+  registerVariations: json("registerVariations").default(JSON.stringify({})), // {sporchissimo: {...}, sporco: {...}, etc}
   
   // Metadata
   isPublished: boolean("isPublished").default(true).notNull(),
